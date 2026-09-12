@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas de Juegos de Mesa | Ludoteca</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación Principal -->
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">Ludoteca de Juegos</h1>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#mantenedor">Mantenedor</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="main-content" class="main-layout">
+
+    <!-- Sección del Catálogo (Navegación e Interacción mediante CSS) -->
+    <section id="catalogo" class="catalog-section" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo de Juegos</h2>
+      <p class="section-intro">Selecciona una categoría para explorar las reseñas de nuestros juegos:</p>
+
+      <!-- Control de Pestañas con CSS puro (inputs ocultos) -->
+      <div class="tabs-container">
+        <input type="radio" id="tab-estrategia" name="categoria" class="tab-input" checked>
+        <input type="radio" id="tab-cartas" name="categoria" class="tab-input">
+        <input type="radio" id="tab-familiares" name="categoria" class="tab-input">
+
+        <!-- Botones de Selección de Categoría -->
+        <div class="tabs-labels" role="tablist" aria-label="Categorías de juegos">
+          <label for="tab-estrategia" class="tab-label" role="tab" tabindex="0">Estrategia</label>
+          <label for="tab-cartas" class="tab-label" role="tab" tabindex="0">Cartas</label>
+          <label for="tab-familiares" class="tab-label" role="tab" tabindex="0">Familiares</label>
+        </div>
+
+        <!-- Panel de Juegos: Estrategia -->
+        <div class="tab-panel panel-estrategia" role="tabpanel" aria-label="Juegos de Estrategia">
+          <div class="games-grid">
+            <article class="game-card">
+              <img src="imagenes/ajedrez.png" alt="Portada del juego Ajedrez" class="game-img">
+              <div class="game-info">
+                <h3>Ajedrez</h3>
+                <p>Un clásico juego de estrategia milenario donde dos jugadores compiten por coronar al rey rival mediante táctica, previsión y control del tablero.</p>
+                <a href="reglamentos/ajedrez.pdf" class="btn-download" download aria-label="Descargar reglamento de Ajedrez en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <img src="imagenes/teg.png" alt="Portada del juego TEG" class="game-img">
+              <div class="game-info">
+                <h3>T.E.G.</h3>
+                <p>Juego de táctica y estrategia de guerra donde debes conquistar continentes cumpliendo objetivos secretos antes que tus oponentes.</p>
+                <a href="reglamentos/teg.pdf" class="btn-download" download aria-label="Descargar reglamento de TEG en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Panel de Juegos: Cartas -->
+        <div class="tab-panel panel-cartas" role="tabpanel" aria-label="Juegos de Cartas">
+          <div class="games-grid">
+            <article class="game-card">
+              <img src="imagenes/truco.png" alt="Portada del juego Truco" class="game-img">
+              <div class="game-info">
+                <h3>Truco</h3>
+                <p>El tradicional juego de naipes de astucia, engaño y cantar envido o truco. Un infaltable en las reuniones de amigos.</p>
+                <a href="reglamentos/truco.pdf" class="btn-download" download aria-label="Descargar reglamento de Truco en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <img src="imagenes/uno.png" alt="Portada del juego UNO" class="game-img">
+              <div class="game-info">
+                <h3>UNO</h3>
+                <p>Divertido e interactivo juego de cartas rápido donde debes quedarte sin naipes en la mano combinando colores y números.</p>
+                <a href="reglamentos/uno.pdf" class="btn-download" download aria-label="Descargar reglamento de UNO en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Panel de Juegos: Familiares -->
+        <div class="tab-panel panel-familiares" role="tabpanel" aria-label="Juegos Familiares">
+          <div class="games-grid">
+            <article class="game-card">
+              <img src="imagenes/catan.png" alt="Portada del juego Catan" class="game-img">
+              <div class="game-info">
+                <h3>Catan</h3>
+                <p>Coloniza la isla de Catan comerciando recursos, construyendo pueblos y caminos para acumular puntos de victoria en familia.</p>
+                <a href="reglamentos/catan.pdf" class="btn-download" download aria-label="Descargar reglamento de Catan en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <img src="imagenes/monopoly.png" alt="Portada del juego Monopoly" class="game-img">
+              <div class="game-info">
+                <h3>Monopoly</h3>
+                <p>El clásico juego de bienes raíces donde debes comprar, alquilar y negociar propiedades para llevar a tus competidores a la quiebra.</p>
+                <a href="reglamentos/monopoly.pdf" class="btn-download" download aria-label="Descargar reglamento de Monopoly en PDF">Descargar Reglamento (PDF)</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Información del Mantenedor -->
+    <section id="mantenedor" class="info-section" aria-labelledby="titulo-mantenedor">
+      <h2 id="titulo-mantenedor">Acerca del Mantenedor</h2>
+      <p>Este sitio web es gestionado y mantenido por el equipo de la Ludoteca Comunitaria. Nuestro objetivo es promover el entretenimiento, el aprendizaje y el encuentro social a través de los juegos de mesa clásicos y modernos.</p>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="info-section" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje o consulta:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Consulta</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <p>&copy; 2026 Ludoteca de Juegos. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* =====================================================
+   ESTILOS GENERALES
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #eeeeee;
+
+    color: #222222;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+header {
+    background-color: #263238;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   BARRA DE NAVEGACIÓN
+   ===================================================== */
+
+nav {
+    background-color: #455a64;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #607d8b;
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   ===================================================== */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 25px auto;
+}
+
+
+/* =====================================================
+   CAJA DE CADA PÁGINA / CATEGORÍA
+   ===================================================== */
+
+.pagina {
+    display: flex;
+
+    min-height: 420px;
+
+    background-color: white;
+
+    border: 1px solid #555555;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   MENÚ LATERAL
+   ===================================================== */
+
+.menu-lateral {
+    width: 25%;
+
+    background-color: #f5f5f5;
+
+    border-right: 1px solid #555555;
+
+    padding: 25px 20px;
+}
+
+.menu-lateral h2 {
+    margin-top: 0;
+
+    font-size: 20px;
+}
+
+.menu-lateral a {
+    display: block;
+
+    color: #0645ad;
+
+    padding: 9px 5px;
+
+    margin-bottom: 5px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a:focus {
+    background-color: #e0e0e0;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   CONTENIDO
+   ===================================================== */
+
+.contenido {
+    width: 75%;
+
+    padding: 25px;
+}
+
+.contenido > h2 {
+    margin-top: 0;
+
+    font-size: 24px;
+
+    border-bottom: 1px solid #cccccc;
+
+    padding-bottom: 10px;
+}
+
+
+/* =====================================================
+   LISTA DE JUEGOS
+   ===================================================== */
+
+.juegos {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CADA JUEGO
+   ===================================================== */
+
+.juego {
+    width: calc(50% - 13px);
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #777777;
+
+    background-color: #fafafa;
+}
+
+.juego img {
+    width: 125px;
+
+    height: 115px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   INFORMACIÓN DEL JUEGO
+   ===================================================== */
+
+.informacion-juego {
+    flex: 1;
+}
+
+.informacion-juego h3 {
+    margin: 0 0 5px 0;
+
+    font-size: 19px;
+}
+
+.informacion-juego p {
+    margin: 5px 0 10px 0;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+.informacion-juego a {
+    color: #0645ad;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   INFORMACIÓN GENERAL
+   ===================================================== */
+
+.informacion-general {
+    background-color: white;
+
+    border: 1px solid #555555;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.informacion-general h2 {
+    margin-top: 0;
+
+    border-bottom: 1px solid #cccccc;
+
+    padding-bottom: 10px;
+}
+
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+
+form {
+    max-width: 600px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 9px;
+
+    border: 1px solid #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+
+    background-color: #455a64;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+button:hover,
+button:focus {
+    background-color: #263238;
+}
+
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+
+footer {
+    background-color: #263238;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+footer p {
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    color: white;
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD - FOCO DEL TECLADO
+   ===================================================== */
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid #ff9800;
+
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLETS
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    .juego {
+        width: 100%;
+    }
+
+    .menu-lateral {
+        width: 30%;
+    }
+
+    .contenido {
+        width: 70%;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - CELULARES
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    nav a {
+        border-bottom: 1px solid #607d8b;
+    }
+
+    .pagina {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 1px solid #555555;
+    }
+
+    .contenido {
+        width: 100%;
+
+        padding: 18px;
+    }
+
+    .juego {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .juego img {
+        width: 140px;
+
+        height: 120px;
+    }
+
+}
+
+
+/* =====================================================
+   MENOR MOVIMIENTO
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}

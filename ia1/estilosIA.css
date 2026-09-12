@@ -1,0 +1,286 @@
+/* --- RESETEO BÁSICO Y VARIABLES --- */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #2980b9;
+  --accent-color: #27ae60;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #dddddd;
+  --focus-outline: #e67e22;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- ACCESIBILIDAD (FOCO VISIBLE) --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+.header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: #3498db;
+}
+
+/* --- DISPOSICIÓN PRINCIPAL --- */
+.main-layout {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+/* --- SISTEMA DE PESTAÑAS PURO CSS (:checked) --- */
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tabs-labels {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab-label {
+  padding: 0.75rem 1.5rem;
+  background-color: #e9ecef;
+  color: var(--primary-color);
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-label:hover {
+  background-color: #dee2e6;
+}
+
+/* Estado activo según el input seleccionado */
+#tab-estrategia:checked ~ .tabs-labels label[for="tab-estrategia"],
+#tab-cartas:checked ~ .tabs-labels label[for="tab-cartas"],
+#tab-familiares:checked ~ .tabs-labels label[for="tab-familiares"] {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+/* Ocultar paneles por defecto */
+.tab-panel {
+  display: none;
+}
+
+/* Mostrar panel correspondiente según input marcado */
+#tab-estrategia:checked ~ .panel-estrategia,
+#tab-cartas:checked ~ .panel-cartas,
+#tab-familiares:checked ~ .panel-familiares {
+  display: block;
+}
+
+/* --- TARJETAS DE JUEGOS --- */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.game-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.game-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.game-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.game-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.game-info p {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.btn-download {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: #219150;
+}
+
+/* --- SECCIONES SECUNDARIAS Y FORMULARIO --- */
+.info-section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
+.info-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #1a252f;
+}
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* --- ADAPTABILIDAD RESPONSIVA --- */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tabs-labels {
+    flex-direction: column;
+  }
+
+  .tab-label {
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
